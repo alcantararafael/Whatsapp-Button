@@ -202,7 +202,7 @@ function createWPButton(){
     WPButton.setAttribute('src', imgURL)
     WPButton.setAttribute('alt', 'Whatsapp Button')
     WPButton.setAttribute('loading', 'lazy')
-    WPButton.setAttribute('style', 'height: auto; max-width: 100%; width: 115px;')
+    WPButton.setAttribute('style', 'height: auto; max-width: 100%; width: 70px;')
 
     document.body.append(WPButton)
 }
