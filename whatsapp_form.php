@@ -280,5 +280,3 @@ alt="whatsapp-icon-3-1" loading="lazy" style="height: auto; max-width: 100%; wid
 src="https://i.pinimg.com/originals/cf/96/e5/cf96e5b917fa2c520da5a9a73afced44.gif" 
 alt="whatsapp-icon-3-1" loading="lazy" style="height: auto; max-width: 100%; width: 115px;">
 -->
-
-

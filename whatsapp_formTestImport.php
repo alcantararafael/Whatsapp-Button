@@ -83,13 +83,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 
 
-
-
+<!-- ------------------------------ -->
+<!-- MAIN USAGE -->
 
 <script>
+  whatsappScriptURL = "https://raw.githubusercontent.com/alcantararafael/Whatsapp-Button/main/whatsapp_form.php"
+
   var container = document.createElement("div");
   container.setAttribute('id', 'whatsappScriptContainer')
-  document.body.append(container)
 
   function whatsappLoadHTML(url, callback) {
     var xhr = new XMLHttpRequest();
@@ -114,7 +115,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       if (currentIndex < scripts.length) {
         var script = scripts[currentIndex];
         if (script.src) {
-          console.log('src: ' + script.src);
           var scriptElement = document.createElement("script");
           scriptElement.src = script.src;
           document.head.appendChild(scriptElement);
@@ -131,10 +131,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     }
     executeNextScript();
 }
-whatsappLoadHTML("https://raw.githubusercontent.com/alcantararafael/Whatsapp-Button/main/whatsapp_form.php", whatsappEvalNewJS);
+
+document.addEventListener("DOMContentLoaded", function(){
+  document.body.append(container)
+  whatsappLoadHTML(whatsappScriptURL, whatsappEvalNewJS);
+});
 
 </script>
 
+<!-- END :: MAIN USAGE -->
+<!-- ------------------------------ -->
 
 
 
