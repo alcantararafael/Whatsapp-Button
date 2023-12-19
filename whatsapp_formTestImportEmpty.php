@@ -18,18 +18,21 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 </head>
 <body>
-
-
 <?php if(!$prod){
 include "tags.php";
 } ?>
 
-
+<?php 
+  if(!$prod){ 
+    include 'whatsapp_form.php';
+  }
+?>
 
 <!-- ------------------------------ -->
 <!-- MAIN USAGE -->
-
+<?php if($prod){ ?>
 <script>
+
   whatsappScriptURL = "https://raw.githubusercontent.com/alcantararafael/Whatsapp-Button/main/whatsapp_form.php"
 
   var container = document.createElement("div");
@@ -81,24 +84,10 @@ document.addEventListener("DOMContentLoaded", function(){
 });
 
 </script>
-
+<?php } ?>
 <!-- END :: MAIN USAGE -->
 <!-- ------------------------------ -->
 
-
-
-
-<button class="whatsapp" name='BTN with Class'>CLASS Whatsapp</button>
-
-<a href="#whatsapp" name='LinkButton'>ANCHOR Whatsapp</a>
-
-<img class="whatsapp wt-footer" phone="11998981339" src="https://26327664.fs1.hubspotusercontent-eu1.net/hubfs/26327664/whatsapp-icon-3-1.png" alt="whatsapp-icon-3-1" width="115" height="39" loading="lazy" style="height: auto; max-width: 100%; width: 115px;">
-<BR>
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/pXorTGt27bc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-<BR>
-
-<iframe src="https://play-eu1.hubspotvideo.com/v/26327664/id/55440392641?renderContext=onload-placeholder&parentOrigin=https%3A%2F%2Fmktbr.vemcogroup.com&pageId=66355225807&locale=en#hsvid=a054f90d-e8a1-49f5-95ae-bd0316fd4904&t=1682360605346" frameborder="0"></iframe>
 
 <div style='margin-left: 200px;'>
 lorem ypsom lorem ypsom lorem ypsom lorem ypsom lorem ypsom lorem ypsom lorem ypsom lorem ypsom <BR>

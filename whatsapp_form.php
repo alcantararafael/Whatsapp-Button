@@ -173,8 +173,8 @@ function createFormCustom(number){
             try{
                 sendConversionAds(email)
             }catch(e){
-                console.log($form)
                 console.log('%c WhatsappForm Error: %s', 'background: #fff; color: #f00', e)
+                console.log($form)
             }
           
             setTimeout(function(){
@@ -184,6 +184,23 @@ function createFormCustom(number){
         } 
     });
     phoneWhatsGlobal = number
+}
+
+function createWPButton(){
+    console.log(createWPButton.name)
+    var imgURL = 'https://media.tenor.com/JfBNTAcCpN0AAAAj/ww.gif'
+
+    var WPButton = document.createElement('img')
+    WPButton.name='WP Default Button'
+    WPButton.classList.add('whatsapp')
+    WPButton.classList.add('wt-footer')
+    WPButton.setAttribute('phone', whatsapp_default_phoneWhats)
+    WPButton.setAttribute('src', imgURL)
+    WPButton.setAttribute('alt', 'Whatsapp Button')
+    WPButton.setAttribute('loading', 'lazy')
+    WPButton.setAttribute('style', 'height: auto; max-width: 100%; width: 115px;')
+
+    document.body.append(WPButton)
 }
 
 function whatsappForm(){
@@ -214,6 +231,9 @@ function whatsappForm(){
     var items = document.querySelectorAll('.whatsapp, a[href="#whatsapp"]');
     if(items.length==0){
         console.log('%c %s', 'background: #fff; color: #f00', funcName+' ITEMS No:'+items.length)
+        
+        createWPButton()
+        items = document.querySelectorAll('.whatsapp, a[href="#whatsapp"]');
     }
     items.forEach(function(btn){
         console.log('Button Name Found: '+btn.name)
