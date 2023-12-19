@@ -120,7 +120,12 @@ function formListener(){
         console.log('form:'+formE.id)
         formE.addEventListener('submit', function(e){
             var email = document.querySelectorAll('input[name="email"]', formE)[0].value
-            sendConversionAds(email)
+            //sendConversionAds(email)
+            try{
+                sendConversionAds(email)
+            }catch(e){
+                console.log('%c WhatsappForm Error: %s', 'background: #fff; color: #f00', e); //console.log($form)
+            }
             return false;
         })
     })
@@ -173,8 +178,7 @@ function createFormCustom(number){
             try{
                 sendConversionAds(email)
             }catch(e){
-                console.log('%c WhatsappForm Error: %s', 'background: #fff; color: #f00', e)
-                console.log($form)
+                console.log('%c WhatsappForm Error: %s', 'background: #fff; color: #f00', e); //console.log($form)
             }
           
             setTimeout(function(){

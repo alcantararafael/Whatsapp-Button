@@ -19,7 +19,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </head>
 <body>
 <?php if(!$prod){
-include "tags.php";
+//include "tags.php";
 } ?>
 
 <?php 
